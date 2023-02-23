@@ -16,13 +16,15 @@ void print_list(node *root)
 {
     if (root != NULL)
     {
-        node *temp = root;
-        if (temp->next == root)
+        if (root->next == root)
         {
-            printf("%d", temp->x);
+            printf("%d", root->x);
+            printf("\n");
+            return;
         }
         else
         {
+            node *temp = root;
             while (temp->next != root)
             {
                 printf("%d ", temp->x);
@@ -67,22 +69,25 @@ node *add_to_list(node *root, int val)
     return root;
 }
 
-void remove_from_list(node *root, int val)
+node *remove_from_list(node *root, int val)
 {
     node *temp = root;
+    if (root->next == root && root->x == val)
+    {
+        free(root);
+        return NULL;
+    }
     if (root->x == val)
     {
-        node *tempo = root;
-
-        while (temp->next != tempo)
+        node *temp = root;
+        while (temp->next != root)
         {
-            printf("mesi");
             temp = temp->next;
         }
-        printf("%d\n", temp->x);
         temp->next = root->next;
-        free(tempo);
-        return;
+        node *ret = root->next;
+        free(root);
+        return ret;
     }
     while (temp->next != root)
     {
@@ -91,12 +96,12 @@ void remove_from_list(node *root, int val)
             node *del = temp->next;
             temp->next = temp->next->next;
             free(del);
-            return;
+            return root;
         }
         temp = temp->next;
     }
     printf("Couldnt find the item in list (%d)\n", val);
-    return;
+    return root;
 }
 
 int main()
@@ -107,6 +112,12 @@ int main()
     print_list(root);
     root = add_to_list(root, 20);
     print_list(root);
-    remove_from_list(root, 15);
+    root = add_to_list(root, 25);
+    print_list(root);
+    root = remove_from_list(root, 15);
+    print_list(root);
+    root = remove_from_list(root, 20);
+    print_list(root);
+    root = remove_from_list(root, 25);
     print_list(root);
 }
