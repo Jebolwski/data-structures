@@ -53,6 +53,26 @@ node *addnode(node *struc, int x)
     }
 }
 
+int max(node *root)
+{
+    node *temp = root;
+    while (temp->right != NULL)
+    {
+        temp = temp->right;
+    }
+    printf("Max value is : %d\n", temp->val);
+}
+
+int min(node *root)
+{
+    node *temp = root;
+    while (temp->left != NULL)
+    {
+        temp = temp->left;
+    }
+    printf("Max value is : %d\n", temp->val);
+}
+
 void printnode(node *root)
 {
     if (root == NULL)
@@ -62,6 +82,56 @@ void printnode(node *root)
     printnode(root->left);
     printf("%d ", root->val);
     printnode(root->right);
+}
+
+void find(node *root, int x)
+{
+    if (root == NULL)
+    {
+        printf("This is null.\n");
+        return;
+    }
+    if (root->val == x)
+    {
+        printf("%d is in the tree.\n", x);
+        return;
+    }
+    else if (root->right && root->val < x)
+    {
+        find(root->right, x);
+    }
+    else if (root->left && root->val > x)
+    {
+        find(root->left, x);
+    }
+    else
+    {
+        printf("%d doesnt exist in the tree.\n", x);
+    }
+}
+
+node *sil(node *root, int x)
+{
+    if (root == NULL)
+    {
+        printf("This is null.\n");
+        return root;
+    }
+
+    node *temp = root;
+    if (temp->val == x)
+    {
+        temp = NULL;
+        return root;
+    }
+    else if (temp->right && temp->val < x)
+    {
+        sil(temp->right, x);
+    }
+    else if (temp->left && temp->val > x)
+    {
+        sil(temp->left, x);
+    }
 }
 
 int main()
@@ -84,6 +154,15 @@ int main()
     printf("\n");
 
     addnode(root, 2);
+    printnode(root);
+    printf("\n");
+
+    max(root);
+    min(root);
+
+    find(root, 15);
+
+    root = sil(root, 2);
     printnode(root);
     printf("\n");
 }
