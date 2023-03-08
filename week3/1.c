@@ -40,17 +40,6 @@ listptr newList()
     return list;
 }
 
-// listenin başına eleman ekleme
-void addtoHead(listptr liste, nptr dugum)
-{
-    if (liste->son == NULL)
-    {
-        liste->son = dugum;
-    }
-    dugum->ileri = liste->bas;
-    liste->bas = dugum;
-}
-
 // listede istenilen bir düğümden sonra eleman ekleme
 void addtoMiddle(nptr dugum1, nptr dugum2)
 {
@@ -98,10 +87,26 @@ void addtoEnd(listptr liste, nptr dugum)
     if (liste->bas == NULL)
     {
         liste->bas = dugum;
+        liste->son = dugum;
+        return;
     }
-    liste->son->ileri = dugum;
-    dugum->ileri = NULL;
-    liste->son = dugum;
+    else
+    {
+        liste->son->ileri = dugum;
+        dugum->ileri = NULL;
+        liste->son = dugum;
+    }
+}
+
+// listenin başına eleman ekleme
+void addtoHead(listptr liste, nptr dugum)
+{
+    if (liste->son == NULL)
+    {
+        liste->son = dugum;
+    }
+    dugum->ileri = liste->bas;
+    liste->bas = dugum;
 }
 
 // istenilen sıradaki elemanı getiren fonk
@@ -129,7 +134,7 @@ void printList(listptr list)
         printf("%d --> ", head->data);
         head = head->ileri;
     }
-    printf("\n");
+    printf("NULL\n");
 }
 
 // veriye göre eleman çağırma
@@ -159,11 +164,14 @@ void removeHead(listptr list)
     }
     if (list->bas->ileri == NULL)
     {
+        nptr temp = list->bas;
         list->bas = NULL;
         list->son = NULL;
+        free(temp);
+        return;
     }
-    list->bas = list->bas->ileri;
     nptr temp = list->bas;
+    list->bas = list->bas->ileri;
     free(temp);
 }
 
@@ -197,30 +205,47 @@ void removeEnd(listptr list)
 // listenin ortasından eleman silme
 void removeMiddle(listptr liste)
 {
+    if (liste->bas == NULL)
+    {
+        printf("Liste bos.\n");
+        return;
+    }
+    if (liste->bas == liste->son)
+    {
+        nptr temp = liste->bas;
+        liste->bas = NULL;
+        liste->son = NULL;
+        free(temp);
+        return;
+    }
     nptr temp = liste->bas;
     for (int i = 0; i < (listSize(liste) / 2) - 1; i++)
     {
-        temp = temp->ileri;
+        liste->bas = liste->bas->ileri;
     }
-    printf("%d -> %d\n", temp->data, temp->ileri->data);
-    nptr temp2 = temp->ileri;
-    temp->ileri = temp->ileri->ileri;
+    nptr temp2 = liste->bas->ileri;
+    liste->bas->ileri = liste->bas->ileri->ileri;
+    liste->bas = temp;
     free(temp2);
-    printf("%d -> %d\n", temp->data, temp->ileri->data);
+    return;
 }
 
 int main()
 {
     listptr list = newList();
-    addtoHead(list, newNode(20));
-    addtoHead(list, newNode(10));
+    nptr n1 = newNode(10);
+    nptr n2 = newNode(20);
+    nptr n3 = newNode(25);
+    nptr n4 = newNode(30);
+    addtoHead(list, n1);
+    addtoEnd(list, n2);
     printList(list);
-    nptr n3 = newNode(30);
-    addtoEnd(list, n3);
-    addtoEnd(list, newNode(25));
-    addtoMiddle(n3, newNode(34));
+    addtoEnd(list, n4);
+    addtoHead(list, n3);
     printList(list);
-    removeEnd(list);
+    addtoMiddle2(list, newNode(34));
+    printList(list);
+    removeHead(list);
     printList(list);
     removeMiddle(list);
     printList(list);
