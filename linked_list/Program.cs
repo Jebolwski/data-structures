@@ -29,6 +29,18 @@ namespace Program
             list.AddMiddle(new Node(83));
 
             list.PrintList();
+
+            list.RemoveHead();
+
+            list.PrintList();
+
+            list.RemoveTail();
+
+            list.PrintList();
+
+            list.RemoveMiddle();
+
+            list.PrintList();
         }
     }
 
@@ -109,5 +121,47 @@ namespace Program
             temp1.next = node;
         }
 
+        public void RemoveHead()
+        {
+            if (this.head != null)
+            {
+                this.head = this.head.next;
+            }
+            else
+            {
+                Console.WriteLine("Liste boş.");
+            }
+        }
+
+        public void RemoveTail()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Liste boş.");
+                return;
+            }
+            Node temp = this.head;
+            while (temp.next != this.tail)
+            {
+                temp=temp.next;
+            }
+            this.tail = temp;
+            this.tail.next = null;
+        }
+
+        public void RemoveMiddle()
+        {
+            if(this.head==null)
+            {
+                Console.WriteLine("Liste boş.");
+                return;
+            }
+            Node temp = this.head;
+            for (int i = 0; i < this.Size() / 2 - 1; i++)
+            {
+                temp = temp.next;
+            }
+            temp.next = temp.next.next;
+        }
     }
 }
