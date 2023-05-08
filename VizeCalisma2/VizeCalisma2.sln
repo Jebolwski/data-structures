@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VizeCalisma2", "VizeCalisma2\VizeCalisma2.csproj", "{74B9AEB3-5557-43AE-AC8B-6D199A673385}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74B9AEB3-5557-43AE-AC8B-6D199A673385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74B9AEB3-5557-43AE-AC8B-6D199A673385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74B9AEB3-5557-43AE-AC8B-6D199A673385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74B9AEB3-5557-43AE-AC8B-6D199A673385}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8B3704E-583C-460F-8C3B-C9D40693F3B9}
+	EndGlobalSection
+EndGlobal
