@@ -1,0 +1,15 @@
+C:\Users\mertg\source\repos\Graf\Graf\bin\Debug\net6.0\Graf.exe
+C:\Users\mertg\source\repos\Graf\Graf\bin\Debug\net6.0\Graf.deps.json
+C:\Users\mertg\source\repos\Graf\Graf\bin\Debug\net6.0\Graf.runtimeconfig.json
+C:\Users\mertg\source\repos\Graf\Graf\bin\Debug\net6.0\Graf.dll
+C:\Users\mertg\source\repos\Graf\Graf\bin\Debug\net6.0\Graf.pdb
+C:\Users\mertg\source\repos\Graf\Graf\obj\Debug\net6.0\Graf.csproj.AssemblyReference.cache
+C:\Users\mertg\source\repos\Graf\Graf\obj\Debug\net6.0\Graf.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mertg\source\repos\Graf\Graf\obj\Debug\net6.0\Graf.AssemblyInfoInputs.cache
+C:\Users\mertg\source\repos\Graf\Graf\obj\Debug\net6.0\Graf.AssemblyInfo.cs
+C:\Users\mertg\source\repos\Graf\Graf\obj\Debug\net6.0\Graf.csproj.CoreCompileInputs.cache
+C:\Users\mertg\source\repos\Graf\Graf\obj\Debug\net6.0\Graf.dll
+C:\Users\mertg\source\repos\Graf\Graf\obj\Debug\net6.0\refint\Graf.dll
+C:\Users\mertg\source\repos\Graf\Graf\obj\Debug\net6.0\Graf.pdb
+C:\Users\mertg\source\repos\Graf\Graf\obj\Debug\net6.0\Graf.genruntimeconfig.cache
+C:\Users\mertg\source\repos\Graf\Graf\obj\Debug\net6.0\ref\Graf.dll
