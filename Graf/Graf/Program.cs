@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace Program
 {
@@ -6,23 +7,34 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            GrafArr grafArr = new GrafArr(10);
-            grafArr.AddEdge(3, 6, 4);
-            grafArr.AddEdge(3, 8, 1);
-            grafArr.AddEdge(5, 8, 2);
-            grafArr.AddEdge(5, 1, 4);
+            GrafArr grafArr = new GrafArr(6);
+            grafArr.AddEdge(1, 2, 1);
+            grafArr.AddEdge(1, 4, 1);
+            grafArr.AddEdge(2, 1, 1);
+            grafArr.AddEdge(2, 4, 1);
+            grafArr.AddEdge(2, 3, 1);
+            grafArr.AddEdge(3, 2, 1);
+            grafArr.AddEdge(3, 5, 1);
+            grafArr.AddEdge(4, 1, 1);
+            grafArr.AddEdge(4, 2, 1);
+            grafArr.AddEdge(4, 5, 1);
+            grafArr.AddEdge(5, 4, 1);
+            grafArr.AddEdge(5, 3, 1);
             for (int i = 0; i < grafArr.arr.Length; i++)
             {
                 if (grafArr.arr[i].Size() != 0)
                 {
-                    Console.Write(i+ " ");
+                    Console.Write(i+ " --[1]--> ");
                     grafArr.arr[i].PrintList();
                 }
                 else
                 {
-                    Console.WriteLine(i+" -----");
+                    Console.WriteLine("-----");
                 }
             }
+            grafArr.BFS(3);
+            Console.WriteLine("\n==========");
+            grafArr.DFS(3);
         }
     }
 
@@ -63,9 +75,81 @@ namespace Program
             this.arr[start].AddTail(node);
         }
 
+        public void BFS(int s)
+        {
+
+            // Mark all the vertices as not
+            // visited(By default set as false)
+            bool[] visited = new bool[n];
+            for (int i = 0; i < n; i++)
+                visited[i] = false;
+
+            // Create a queue for BFS
+            LinkedList<int> queue = new LinkedList<int>();
+
+            // Mark the current node as
+            // visited and enqueue it
+            visited[s] = true;
+            queue.AddLast(s);
+
+            while (queue.Any())
+            {
+
+                // Dequeue a vertex from queue
+                // and print it
+                s = queue.First();
+                Console.Write(s + " ");
+                queue.RemoveFirst();
+
+                // Get all adjacent vertices of the
+                // dequeued vertex s. If a adjacent
+                // has not been visited, then mark it
+                // visited and enqueue it
+                List list = arr[s];
+
+                foreach (Node val in list)
+                {
+                    if (!visited[val.end])
+                    {
+                        visited[val.end] = true;
+                        queue.AddLast(val.end);
+                    }
+                }
+            }
+        }
+
+        void DFSUtil(int v, bool[] visited)
+        {
+            // Mark the current node as visited
+            // and print it
+            visited[v] = true;
+            Console.Write(v + " ");
+
+            // Recur for all the vertices
+            // adjacent to this vertex
+            List vList = arr[v];
+            foreach (Node n in vList)
+            {
+                if (!visited[n.end])
+                    DFSUtil(n.end, visited);
+            }
+        }
+
+        // The function to do DFS traversal.
+        // It uses recursive DFSUtil()
+        public void DFS(int v)
+        {
+            // Mark all the vertices as not visited
+            // (set as false by default in c#)
+            bool[] visited = new bool[n];
+
+            // Call the recursive helper function
+            // to print DFS traversal
+            DFSUtil(v, visited);
+        }
     }
 
-    class List
+    class List : IEnumerable
     {
         public Node head;
         public Node tail;
@@ -193,6 +277,17 @@ namespace Program
                 temp = temp.next;
             }
             temp.next = temp.next.next;
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            ArrayList arrlist = new ArrayList();
+            Node temp = this.head;
+            while (temp != null) {
+                arrlist.Add(temp);
+                temp = temp.next;
+            }
+            return arrlist.GetEnumerator();
         }
     }
 
