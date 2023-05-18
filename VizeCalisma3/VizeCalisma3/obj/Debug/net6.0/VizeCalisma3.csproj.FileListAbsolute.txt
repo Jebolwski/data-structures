@@ -1,0 +1,15 @@
+C:\Users\mertg\source\repos\VizeCalisma3\VizeCalisma3\bin\Debug\net6.0\VizeCalisma3.exe
+C:\Users\mertg\source\repos\VizeCalisma3\VizeCalisma3\bin\Debug\net6.0\VizeCalisma3.deps.json
+C:\Users\mertg\source\repos\VizeCalisma3\VizeCalisma3\bin\Debug\net6.0\VizeCalisma3.runtimeconfig.json
+C:\Users\mertg\source\repos\VizeCalisma3\VizeCalisma3\bin\Debug\net6.0\VizeCalisma3.dll
+C:\Users\mertg\source\repos\VizeCalisma3\VizeCalisma3\bin\Debug\net6.0\VizeCalisma3.pdb
+C:\Users\mertg\source\repos\VizeCalisma3\VizeCalisma3\obj\Debug\net6.0\VizeCalisma3.csproj.AssemblyReference.cache
+C:\Users\mertg\source\repos\VizeCalisma3\VizeCalisma3\obj\Debug\net6.0\VizeCalisma3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mertg\source\repos\VizeCalisma3\VizeCalisma3\obj\Debug\net6.0\VizeCalisma3.AssemblyInfoInputs.cache
+C:\Users\mertg\source\repos\VizeCalisma3\VizeCalisma3\obj\Debug\net6.0\VizeCalisma3.AssemblyInfo.cs
+C:\Users\mertg\source\repos\VizeCalisma3\VizeCalisma3\obj\Debug\net6.0\VizeCalisma3.csproj.CoreCompileInputs.cache
+C:\Users\mertg\source\repos\VizeCalisma3\VizeCalisma3\obj\Debug\net6.0\VizeCalisma3.dll
+C:\Users\mertg\source\repos\VizeCalisma3\VizeCalisma3\obj\Debug\net6.0\refint\VizeCalisma3.dll
+C:\Users\mertg\source\repos\VizeCalisma3\VizeCalisma3\obj\Debug\net6.0\VizeCalisma3.pdb
+C:\Users\mertg\source\repos\VizeCalisma3\VizeCalisma3\obj\Debug\net6.0\VizeCalisma3.genruntimeconfig.cache
+C:\Users\mertg\source\repos\VizeCalisma3\VizeCalisma3\obj\Debug\net6.0\ref\VizeCalisma3.dll
