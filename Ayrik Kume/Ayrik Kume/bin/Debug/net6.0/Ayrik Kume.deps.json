@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Ayrik Kume/1.0.0": {
+        "runtime": {
+          "Ayrik Kume.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Ayrik Kume/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
