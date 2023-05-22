@@ -1,0 +1,15 @@
+C:\Users\mertg\source\repos\FinalTraining1\FinalTraining1\bin\Debug\net6.0\FinalTraining1.exe
+C:\Users\mertg\source\repos\FinalTraining1\FinalTraining1\bin\Debug\net6.0\FinalTraining1.deps.json
+C:\Users\mertg\source\repos\FinalTraining1\FinalTraining1\bin\Debug\net6.0\FinalTraining1.runtimeconfig.json
+C:\Users\mertg\source\repos\FinalTraining1\FinalTraining1\bin\Debug\net6.0\FinalTraining1.dll
+C:\Users\mertg\source\repos\FinalTraining1\FinalTraining1\bin\Debug\net6.0\FinalTraining1.pdb
+C:\Users\mertg\source\repos\FinalTraining1\FinalTraining1\obj\Debug\net6.0\FinalTraining1.csproj.AssemblyReference.cache
+C:\Users\mertg\source\repos\FinalTraining1\FinalTraining1\obj\Debug\net6.0\FinalTraining1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mertg\source\repos\FinalTraining1\FinalTraining1\obj\Debug\net6.0\FinalTraining1.AssemblyInfoInputs.cache
+C:\Users\mertg\source\repos\FinalTraining1\FinalTraining1\obj\Debug\net6.0\FinalTraining1.AssemblyInfo.cs
+C:\Users\mertg\source\repos\FinalTraining1\FinalTraining1\obj\Debug\net6.0\FinalTraining1.csproj.CoreCompileInputs.cache
+C:\Users\mertg\source\repos\FinalTraining1\FinalTraining1\obj\Debug\net6.0\FinalTraining1.dll
+C:\Users\mertg\source\repos\FinalTraining1\FinalTraining1\obj\Debug\net6.0\refint\FinalTraining1.dll
+C:\Users\mertg\source\repos\FinalTraining1\FinalTraining1\obj\Debug\net6.0\FinalTraining1.pdb
+C:\Users\mertg\source\repos\FinalTraining1\FinalTraining1\obj\Debug\net6.0\FinalTraining1.genruntimeconfig.cache
+C:\Users\mertg\source\repos\FinalTraining1\FinalTraining1\obj\Debug\net6.0\ref\FinalTraining1.dll
